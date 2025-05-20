@@ -1,0 +1,46 @@
+.datepicker__input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f2f4fd;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  min-width: 160px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.datepicker__input ::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.datepicker__input:hover {
+  background: #e7e9f0;
+}
+
+.datepicker__field {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 140px;
+  color: inherit;
+}
+
+.dark {
+  background: #2f3a5a !important;
+  color: #f5f5f5 !important;
+}
+
+.dark:hover {
+  background: #3d4c77 !important;
+}
+
+.dark .datepicker__field {
+  color: #f5f5f5;
+}
+
+.dark ::placeholder {
+  color: #aab8ff;
+}
