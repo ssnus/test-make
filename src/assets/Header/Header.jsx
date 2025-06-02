@@ -9,7 +9,7 @@ export default function Header(){
         <>
             <header className={styled.header}>
                 <div className={styled.header__logo}>
-                    <img src={Logo} alt="Logo" />
+                    <img src={Logo} alt="Logo" className={styled.header__icon} />
                     <p className={styled.header__name}>
                         Шахова <br/> Алина Андреевна
                     </p>
