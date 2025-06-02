@@ -1,0 +1,25 @@
+@use '../style/helpers' as*;
+
+.test{
+    &__item{
+        display: grid;
+        grid-column: 5 / span 6;  
+        row-gap: rem(32);
+        margin-bottom: rem(50);
+
+        @include tablet{
+            grid-column: 3 / span 5;  
+        }
+
+        @include mobile{
+            grid-column: 1 / span 4;  
+        }
+
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: fluid(280, 120) auto ;
+        align-items: start;  
+    }
+}

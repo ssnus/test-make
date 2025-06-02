@@ -7,12 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass-watch": "sass --watch ."
+  
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "sass": "^1.89.1",
     "vite": "^6.3.5"
   },
   "dependencies": {

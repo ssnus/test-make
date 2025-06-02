@@ -1,0 +1,46 @@
+@use '../style/helpers' as*;
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  grid-column: 5 / span 1;  
+
+  @include tablet{
+    grid-column: 3 / span 1;  
+  }
+  @include mobile{
+    grid-column: 1 / span 1;  
+
+  }
+
+  &__input {
+    padding: rem(6) 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: rem(2) solid #AEADAE;
+    font-size: 16px;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+
+    &:hover {
+      border-bottom: rem(2) solid var(--color-accent);
+    }
+  }
+
+  &__invalid {
+    border-bottom: rem(4) solid #E80F3B !important;
+  }
+
+  &__hasValue {
+    border-bottom: rem(4) solid var(--color-accent); 
+  }
+
+  &__error {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #e80f3b;
+  }
+}

@@ -1,0 +1,21 @@
+@use '../style/helpers' as*;
+
+.header{
+    grid-column: 1 / span 12;
+    display: flex;
+    justify-content: space-between;
+    padding: fluid(40, 10);
+
+    @include tablet{
+        grid-column: 1 / span 8;
+    }
+
+    @include mobile{
+        grid-column: 1 / span 4;
+    }
+
+    &__logo{
+        display: flex;
+        column-gap: rem(20);
+    }
+}

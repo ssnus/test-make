@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+:root{
+  --color-light: #F2F2F2;
+
+  --color-dark: #1B1B1B;
+  --color-accent: #3e29e3;
+    --border: 2px solid #3e29e3 ;
+    --gradient: linear-gradient(45deg, #DD80ED 1%, var(--color-accent) 98%);
+    --gradient-hover: linear-gradient(225deg, #dd80ed 0%, var(--color-accent) 100%);
+    --gradient-active:linear-gradient(207deg, #dd80ed 0%, #3d28e3 100%);
+
+    --font-family: "GraphikLCG", sans-serif;
+
+    --container-width: #{rem(1780)};
+    --container-padding-x: #{rem(15)};
+    --gap: #{rem(32)};
+
+
+    @include laptop{
+        --continer-width: #{rem(1280)};
+    }
+
+    @include mobile{
+      --gap: #{rem(24)};
+
+    }
+}

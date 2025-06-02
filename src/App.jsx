@@ -1,10 +1,11 @@
 import React from 'react';
-import DatePickerWithYear from './assets/DatePickerWithYear/DatePickerWithYear';
+import HomePage from './assets/HomePage/HomePage';
+import '../src/assets/style/main.scss';
 
 export default function App() {
   return (
     <div>
-      <DatePickerWithYear />
+      <HomePage />
     </div>
   );
 }

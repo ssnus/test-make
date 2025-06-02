@@ -1,0 +1,116 @@
+@use 'helpers' as *;
+
+html{
+    &.is-lock{
+        overflow: hidden;
+    }
+}
+
+body{
+    @include fluid-text(18,14);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    letter-spacing: -0.03em;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+main{
+    flex-grow: 1;
+}
+
+
+h1, .h1,
+h2, .h2{
+    font-weight: 700;
+}
+
+h3, .h3,
+h4, .h4{
+    font-weight: 500;
+}
+
+h1, .h1{
+    @include fluid-text(48,32);
+    line-height: 117%;
+}
+
+h2, .h2{
+    @include fluid-text(32,28);
+    line-height: 125%;
+}
+h3, .h3{
+    @include fluid-text(24,20);
+    line-height: 133%;
+}
+h4, .h4{
+    font-size: rem(18);
+    line-height: 156%;
+}
+
+.lead{
+    @include fluid-text(24,20);
+    font-weight: 400;
+    line-height: 133%;
+}
+
+.p_18{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+}
+.p_16{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+.p_14{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+}
+
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+a{
+    color: inherit;
+
+}
+
+a,
+button{
+    &[aria-label]{
+        position: relative;
+
+        &::before{
+            @include abs-center;
+            @include square(rem(44));
+
+            content: '';
+
+        }
+    }
+}
+
+span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #7d7d7d;
+}
+
+ul {
+    list-style: none;   
+    margin: 0;          
+    padding: 0;         
+}
+

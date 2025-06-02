@@ -1,0 +1,37 @@
+@use '../style/helpers' as*;
+
+.button{
+    background-image: var(--gradient);
+    border: none;
+    cursor: pointer;
+    border-radius: rem(32);
+    padding: rem(16) rem(32);
+    color: var(--color-light);
+    margin-top: rem(20);
+    margin-bottom: rem(40);
+    grid-column: 5 / span 1; 
+    transition: background-image 0.3s ease;
+    
+
+    @include tablet{
+        grid-column: 3 / span 1;  
+    }
+    @include mobile{
+        grid-column: 1 / span 1;  
+
+    }
+
+    &:hover{
+        background-image: var(--gradient-hover);
+    }
+
+    &:active {
+        background-image: var(--gradient-active);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: #cbcbcc;
+    }
+
+}
