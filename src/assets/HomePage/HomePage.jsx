@@ -1,3 +1,5 @@
+import Accordion from '../Accordion/Accordion';
+import Boxs from '../Boxs/Boxs';
 import Button from '../Button/Button';
 import DropdownSimple from '../DropdownSimple/DropdownSimple';
 import Header from '../Header/Header';
@@ -82,6 +84,8 @@ export default function HomePage(){
                     <Inputs/>
                     <DropdownSimple/>
                     <Button/>
+                    <Boxs/>
+                    <Accordion/>
                 </div>
             </section>
         </>

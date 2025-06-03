@@ -1,0 +1,71 @@
+@use '../style/helpers' as*;
+
+.accordion {
+    grid-column: 5 / span 6;  
+    margin-bottom: rem(50);
+
+    @include tablet{
+        grid-column: 3 / span 5;  
+    }
+    @include mobile{
+        grid-column: 1 / span 4;  
+
+    }
+
+    &__item {
+        border-bottom: rem(2) solid var(--color-accent);
+        max-width: rem(700);
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__button {
+        padding: rem(15) 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    &__span{
+        color: var(--color-dark);
+        transition: color 0.3s;
+        &:hover {
+            color: var(--color-accent);
+        }   
+    }
+    &__arrow {
+        transition: transform 0.3s;
+    }
+
+    &__arrowOpen {
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+    }
+
+    &__panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--color-dark);
+        padding: 0 0.5rem;
+    }
+
+    &__panelOpen {
+        max-height: 500px;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        color: #222;
+        padding: 1rem 0.5rem;
+    }
+
+}
+

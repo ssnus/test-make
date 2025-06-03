@@ -1,0 +1,116 @@
+@use '../style/helpers' as*;
+
+.boxs{
+    display: flex;
+    column-gap: fluid(50, 10);
+    margin-bottom: 1rem;
+    grid-column: 5 / span 3;  
+
+    @include tablet{
+        grid-column: 3 / span 3;  
+    }
+    @include mobile{
+        grid-column: 1 / span 3;  
+
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+    &__container {
+        display: block;
+        position: relative;
+        padding-left: rem(35);
+        cursor: pointer;
+        user-select: none;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: rem(24);
+        width: rem(24);
+        background-color: var(--color-light);
+        border: rem(2) solid #aeadae;
+        transition: all 0.3s ease;
+    }
+
+    &__container:hover input:not(:disabled) ~ &__checkmark {
+        border-color: var(--color-accent);
+    }
+
+    &__container input:checked ~ &__checkmark {
+        background-color: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+    &__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    &__container input:checked ~ &__checkmark:after {
+        display: block;
+        left: rem(7);
+        top: rem(3);
+        width: rem(6);
+        height: rem(12);
+        border: solid var(--color-light);
+        border-width: 0 2.5px 2.5px 0;
+        transform: rotate(45deg);
+    }
+
+    &__radiomark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: rem(24);
+        width: rem(24);
+        background-color: var(--color-light);
+        border: rem(2) solid #aeadae;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+
+    &__container:hover input:not(:disabled) ~ &__radiomark {
+        border-color: var(--color-accent);
+    }
+
+    &__container input:checked ~ &__radiomark {
+        border-color: var(--color-accent);
+        background-color: var(--color-accent);
+    }
+
+    &__radiomark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    &__container input:checked ~ &__radiomark:after {
+        display: block;
+        top: rem(6);
+        left: rem(6);
+        width: rem(8);
+        height: rem(8);
+        border-radius: 50%;
+        background: var(--color-light);
+    }
+
+}
+

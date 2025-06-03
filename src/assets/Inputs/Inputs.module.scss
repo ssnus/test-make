@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  grid-column: 5 / span 1;  
+  grid-column: 5 / span 2;  
 
   @include tablet{
     grid-column: 3 / span 1;  
@@ -22,6 +22,7 @@
     border-bottom: rem(2) solid #AEADAE;
     font-size: 16px;
     outline: none;
+    max-width: rem(280);
     transition: border-bottom 0.3s ease;
 
     &:hover {
